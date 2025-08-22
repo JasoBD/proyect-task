@@ -32,35 +32,6 @@ npm install
 # Corre la aplicación
 ng serve
 
-## **Estructura del Proyecto**
-
-src/
-└── app/
-    ├── core/                     # Lógica central y servicios compartidos
-    │   ├── api.service.ts        # Servicio genérico HTTP con manejo de errores
-    │   ├── auth.guard.ts         # Protección de rutas
-    │   ├── auth.service.ts       # Autenticación (Login/Logout)
-    │   ├── notification.service.ts # Notificaciones en UI
-    │   ├── projects.service.ts   # Lógica de proyectos
-    │   ├── tasks.service.ts      # Lógica de tareas
-    │   ├── layout/               # Layout principal de la app
-    │   │   ├── default-layout/
-    │   │   ├── default-footer/
-    │   │   ├── default-header/
-    │   │   ├── _nav.ts
-    │   │   ├── default-layout.component.html
-    │   │   ├── default-layout.component.scss
-    │   │   ├── default-layout.component.ts
-    │   │   └── index.ts
-    │   └── index.ts
-    │
-    ├── views/                    # Vistas principales
-    │   ├── dashboard/           # Panel principal
-    │   ├── modulos/             # Espacio para módulos futuros
-    │   ├── projects/            # Gestión de proyectos
-    │   │   ├── project-form.component.ts
-    │   │   └── projects-list.component.ts
-    │   └── tasks/               # Gestión de tareas
 
 ## **Autenticación**
 - **Login**: cualquier email + contraseña ≥ 4 caracteres.
