@@ -62,7 +62,6 @@ src/
     │   │   └── projects-list.component.ts
     │   └── tasks/               # Gestión de tareas
 
-
 ## **Autenticación**
 - **Login**: cualquier email + contraseña ≥ 4 caracteres.
 - Guarda token simulado en `localStorage`.
@@ -70,7 +69,6 @@ src/
 - **Guard (`authGuard`)**: protege rutas de proyectos y tareas.
 
 ---
-
 ## **Consumo de APIs**
 - **Proyectos**: `https://jsonplaceholder.typicode.com/users`
 - **Tareas**: `https://jsonplaceholder.typicode.com/todos`
@@ -80,9 +78,6 @@ src/
 
 ## **Lazy Loading**
 - `projects/` y `tasks/` se cargan **on-demand** con `loadChildren`.
-
----
-
 
 ---
 
@@ -97,7 +92,6 @@ src/
 - Captura errores (`HttpErrorResponse`) y muestra mensajes.
 
 ---
-
 
 ## **Autor**
 - **Jason Andres Murillo Mena**
