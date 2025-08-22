@@ -33,7 +33,7 @@ npm install
 ng serve
 
 ## **Estructura del Proyecto**
-```
+
 src/
 └── app/
     ├── core/                     # Lógica central y servicios compartidos
@@ -61,9 +61,7 @@ src/
     │   │   ├── project-form.component.ts
     │   │   └── projects-list.component.ts
     │   └── tasks/               # Gestión de tareas
-```
 
----
 
 ## **Autenticación**
 - **Login**: cualquier email + contraseña ≥ 4 caracteres.
