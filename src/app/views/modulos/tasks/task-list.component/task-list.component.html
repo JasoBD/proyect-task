@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="header">
+    <h2>Tareas </h2>
+    <div class="actions">
+      <button cButton cTooltip="Haz click aqui para agregar una nueva tarea" color="primary" (click)="create()">Nueva
+        tarea</button>
+    </div>
+  </div>
+
+  <table bordered cTable>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Título</th>
+        <th scope="col">Completada</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of data">
+        <th scope="row">{{ t.id }}</th>
+        <td>{{ t.title }}</td>
+        <td>
+          <input type="checkbox" class="checkbox" [checked]="t.completed" (change)="toggle(t)" />
+        </td>
+        <td class="actions">
+          <button cButton color="dark" cTooltip="Haz click aqui para editar esta tarea"
+            (click)="edit(t)">Editar</button>
+          <button cButton color="danger" cTooltip="Haz click aqui para eliminar esta tarea"
+            (click)="delete(t)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="loading">Cargando...</p>
+</div>

@@ -1,0 +1,20 @@
+<h2>{{ title }}</h2>
+<form #customStylesForm="ngForm" [gutter]="3" [validated]="customStylesValidated" novalidate cForm
+  class="needs-validation" (submit)="save($event, titleInput.value, descInput.value)">
+  <div class="mb-3">
+    <label cLabel for="validationCustom01">Titulo</label>
+    <input cFormControl type="text" #titleInput [value]="model.title" placeholder="Título" required>
+    <c-form-feedback [valid]="false">Por favor ingrese un titulo .</c-form-feedback>
+
+  </div>
+  <div class="mb-3">
+    <label cLabel for="exampleFormControlTextarea1">Descripción</label>
+    <textarea cFormControl id="exampleFormControlTextarea1" cFormControltype="text" #descInput
+      [value]="model.description" placeholder="Descripción" required rows="3"></textarea>
+  </div>
+
+  <br><br>
+  <button cButton color="danger" cTooltip="Haz click aqui para cancelar" (click)="cancel($event)">Cancelar</button>
+  <button cButton cTooltip="Haz click aqui para guardar un nuevo proyecto" color="primary" style="margin-left: 10px;"
+    type="submit">Guardar</button>
+</form>

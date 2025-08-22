@@ -1,0 +1,18 @@
+<h2>{{ title }}</h2>
+<form #customStylesForm="ngForm" [gutter]="3" [validated]="customStylesValidated" novalidate cForm
+  class="needs-validation" (submit)="save($event, titleInput.value, completedInput.checked)">
+  <div class="mb-3">
+    <label cLabel for="inputEmail-1">Título</label>
+    <input cFormControl type="text" #titleInput [value]="model.title" placeholder="Título" required>
+    <c-form-feedback [valid]="false">Por favor ingrese un titulo .</c-form-feedback>
+  </div>
+
+  <c-form-check class="mb-3">
+    <input type="checkbox" class="checkbox" #completedInput [checked]="model.completed"> Completada
+  </c-form-check><br><br>
+
+  <button cButton color="danger" cTooltip="Haz click aqui para cancelar" (click)="cancel($event)">Cancelar</button>
+  <button cButton color="primary" cTooltip="Haz click aqui para guardar esta tarea" style="margin-left: 10px;"
+    type="submit">Guardar</button>
+
+</form>

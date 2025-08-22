@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="header">
+    <h2>Proyectos</h2>
+    <div class="actions">
+      <button cButton cTooltip="Haz click aqui para agregar un nuevo proyecto" color="primary" (click)="create()">Nuevo
+        Proyecto</button>
+    </div>
+  </div>
+
+  <table bordered cTable>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Título</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of data">
+        <th scope="row">{{ p.id }}</th>
+        <td>{{ p.title }}</td>
+        <td>{{ p.description }}</td>
+        <td class="actions">
+          <button cButton color="dark" cTooltip="Haz click aqui para editar este proyecto"
+            (click)="edit(p)">Editar</button>
+          <button cButton color="danger" cTooltip="Haz click aqui para eliminar este proyecto"
+            (click)="delete(p)">Eliminar</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="loading">Cargando...</p>
+</div>

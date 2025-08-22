@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.actions button {
+  margin-left: 8px;
+}
+
+.button.danger {
+  background-color: #d32f2f;
+  color: white;
+}
